@@ -1,0 +1,19 @@
+h1 {
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  @include font-size(32px);
+}
+
+p {
+  line-height: 1.75;
+  @include font-size(14px);
+}
+
+.sm-gray-font {
+  @include font-size(10px);
+  color: #9EA6AC;
+}
+
+.line-height {
+  line-height: 1.75;
+}

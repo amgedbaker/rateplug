@@ -1,0 +1,70 @@
+//  ==========================================================================
+//  Global Layout-esque Settings
+//  ==========================================================================
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  width: 100%;
+  font-weight: 400;
+  @include font-condensed(0.9375em, $light-black, 400, 1.1);
+  @include antialiased;
+}
+
+li {
+	list-style: none;
+}
+
+img{
+	max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+h1 {
+  @include font-regular(4.0625em, $light-black, 300, 1.25);
+}
+
+h2 {
+  @include font-regular(2.8125em, $light-black, 300, 1.2);
+}
+
+h3 {
+  @include font-regular(1.5em, $light-black, 300);
+}
+
+h4 {
+  @include font-regular(1.25em, $light-black, 400);
+}
+
+h5 {
+  @include font-condensed(1.125em, $light-black, 400);
+}
+
+.font-bold {
+  @include font-condensed(1.125em, $light-black, 700);
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.font-quote-small {
+  @include font-regular(1.125em, $blue, 300i, 1.125);
+}
+
+.font-quote-large {
+  @include font-regular(1.875em, $blue, 300i, 1.125);
+}
