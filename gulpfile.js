@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 // make vars for file paths
 var paths = {
   source: 'src/assets/',
-  dest: 'docs/',
+  dest: 'build/',
   'js': {
     'bootstrap': [
       './src/assets/js/bootstrap/affix.js',
@@ -55,7 +55,7 @@ gulp.task('html', function() {
 gulp.task('smush', function() {
   gulp.src('src/assets/images/*')
   .pipe(imagemin())
-  .pipe(gulp.dest('docs/images'))
+  .pipe(gulp.dest('build/images'))
 });
 
 // minify css
