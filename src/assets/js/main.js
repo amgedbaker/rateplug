@@ -4,7 +4,9 @@ var Main = {
     var _this = this;
     this.$window = $(window);
     this.$window.on('scroll', function() {
-      _this.navShrink();
+      if(_this.$window.width() >= 768) {
+        _this.navShrink();
+      }
     });
     this.sidebarNav();
   },
@@ -21,8 +23,8 @@ var Main = {
     var sel = sideslider.attr('data-target');
     var sel2 = sideslider.attr('data-target-2');
     sideslider.click(function(event){
-        $(sel).toggleClass('in');
-        $(sel2).toggleClass('out');
+      $(sel).toggleClass('in');
+      $(sel2).toggleClass('out');
     });
   }
 

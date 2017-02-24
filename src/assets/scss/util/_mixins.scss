@@ -127,20 +127,20 @@
 
 // Everything above and including the tablet portrait
 @mixin tablet-portrait-and-up {
-  @media (min-width : 52em) { // 832px
+  @media (min-width : 768px) { 
     @content;
   }
 }
 
 @mixin tablet-landscape-and-up {
-  @media (min-width : 64em) {  // 1024px
+  @media (min-width : 1024px) {
     @content;
   }
 }
 
 // below tablet portrait
 @mixin below-tablet-portrait {
-  @media (max-width : 51.938em) { // 831px
+  @media (max-width : 767px) {
     @content;
   }
 }

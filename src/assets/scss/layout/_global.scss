@@ -17,6 +17,14 @@ body {
   @include antialiased;
 }
 
+
+@media (min-width: 1300px) {
+  .container {
+    width: 1240px;
+  }
+}
+
+
 li {
 	list-style: none;
 }
