@@ -1,0 +1,36 @@
+.btn {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  border: none;
+  transition: all 0.25s ease;
+
+  &:hover {
+    transition: all 0.25s ease;
+  }
+}
+
+.btn-solid-green {
+  // width: 80%;
+  // max-width: 400px;
+  background-color: $green;
+  color: $light-black;
+  margin: 20px auto;
+  &:hover, &:focus, &:visited {
+    background-color: $green-hover;
+    color: $light-black;
+  }
+}
+
+.btn-fill {
+
+}
+
+.btn-hollow {
+
+}
+
+.btn-lg {
+  padding: 16px;
+}

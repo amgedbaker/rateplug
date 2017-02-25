@@ -47,9 +47,11 @@
   }
   .navbar-nav {
     float: none;
-    padding: 0.5em 2em 0;
+    padding: 0.5em 0 2em 0;
+    margin: 0;
     @include tablet-portrait-and-up {
       // border: 1px solid red;
+      // margin: 7.5px -15px;
       text-align: right;
       height: 60px;
     }
@@ -73,13 +75,25 @@
       @include tablet-portrait-and-up {
         float: none;
         display: inline-block;
-        padding-top: 17px;
+        padding-top: 19px;
+        margin: 2px 5px;
+      }
+      @include tablet-landscape-and-up {
+        margin: 0 12px;
+      }
+      @media (min-width: 1200px) {
+        margin: 0 18px;
       }
       > a {
           color: $light-black;
           @include tablet-portrait-and-up {
             color: white;
-            padding-bottom: 0;
+            padding: 10px 10px 0;
+            font-size: 14px;
+          }
+          @include tablet-landscape-and-up {
+            padding: 10px 15px 0;
+            font-size: 1em;
           }
           &:hover, &:active, &:focus, &:visited {
             @include below-tablet-portrait {
@@ -150,7 +164,7 @@
 .upper-nav {
   li {
     line-height: 20px;
-    padding: 10px 15px;
+    padding: 10px 0 15px 20px;
 
     a {
       color: $font-gray;
@@ -163,13 +177,13 @@
 }
 
 .mobile-login {
-  margin: 0 auto;
+  margin: 15px auto;
   width: 90%;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
   a {
-    padding: 20px;
+    padding: 20px 30px;
     display: inline-block;
     &:hover {
       text-decoration: none;
@@ -210,12 +224,16 @@
   // min-height: 30px;
   // height: 30px;
   // margin-top: -20px;
-  top: -70px;
-  transition: all 0.5s ease;
+  @include tablet-portrait-and-up {
+    top: -70px;
+    transition: all 0.5s ease;
+  }
 
   .icon-logo {
-    max-width: 195px;
-    transition: max-width 0.25s ease;
+    @include tablet-landscape-and-up {
+      max-width: 195px;
+      transition: max-width 0.25s ease;
+    }
   }
 }
 
@@ -235,8 +253,33 @@
 
 .icon-logo {
   width: 100%;
-  max-width: 225px;
+  max-width: 175px;
   transition: max-width 0.25s ease;
+  @include tablet-portrait-and-up {
+    max-width: 220px;
+  }
+  @include tablet-landscape-and-up {
+    max-width: 250px;
+  }
+}
+
+.sign-up-mobile {
+  padding: 0 30px;
+}
+
+.sign-up-nav {
+  margin-right: 0 !important;
+  padding: 0 !important;
+  button {
+    margin: -18px 0 0 0;
+    padding: 5px 28px;
+    @include tablet-landscape-and-up {
+      padding: 8px 38px;
+    }
+    @media(min-width: 1190px) {
+      padding: 10px 70px;
+    }
+  }
 }
 
 

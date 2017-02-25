@@ -3,12 +3,9 @@ var Main = {
   init: function() {
     var _this = this;
     this.$window = $(window);
-    this.$window.on('scroll', function() {
-      if(_this.$window.width() >= 768) {
-        _this.navShrink();
-      }
-    });
     this.sidebarNav();
+    this.handleWindowScroll();
+    this.handleWindowResize();
   },
 
   navShrink: function() {
@@ -25,6 +22,24 @@ var Main = {
     sideslider.click(function(event){
       $(sel).toggleClass('in');
       $(sel2).toggleClass('out');
+    });
+  },
+
+  handleWindowResize: function() {
+    var _this = this;
+    this.$window.on('resize', function() {
+      if(_this.$window.width() <= 768) {
+        $('.navbar-fixed-top').removeClass('shrink');
+      }
+    });
+  },
+
+  handleWindowScroll: function() {
+    var _this = this;
+    this.$window.on('scroll', function() {
+      if(_this.$window.width() >= 768) {
+        _this.navShrink();
+      }
     });
   }
 
