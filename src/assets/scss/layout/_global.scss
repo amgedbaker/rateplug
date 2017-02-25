@@ -13,14 +13,15 @@ body {
   min-height: 100%;
   width: 100%;
   font-weight: 400;
-  @include font-condensed(0.9375em, $light-black, 400, 1.1);
+  @include font-condensed(1em, $light-black, 400, 1.1);
   @include antialiased;
 }
 
-
-@media (min-width: 1300px) {
-  .container {
-    width: 1240px;
+.max-width-container {
+  @include tablet-portrait-and-up {
+    max-width: 1280px;
+    padding: 0 10px;
+    margin: 0 auto;
   }
 }
 
