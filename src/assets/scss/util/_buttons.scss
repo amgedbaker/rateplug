@@ -5,6 +5,7 @@
   border-radius: 4px;
   border: none;
   transition: all 0.25s ease;
+  margin: 20px auto;
 
   &:hover {
     transition: all 0.25s ease;
@@ -16,10 +17,20 @@
   // max-width: 400px;
   background-color: $green;
   color: $light-black;
-  margin: 20px auto;
   &:hover, &:focus, &:visited {
     background-color: $green-hover;
     color: $light-black;
+  }
+}
+
+.btn-hollow-green {
+  background-color: white;
+  border: 1px solid $green;
+  color: $green;
+  &:hover, &:focus, &:visited {
+    color: $light-black;
+    border: 1px solid $green-hover;
+    background-color: white;
   }
 }
 
