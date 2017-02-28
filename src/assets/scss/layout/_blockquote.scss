@@ -1,0 +1,22 @@
+.blockquote-bg {
+  background-color: $white-gray;
+  background-image: url('/images/icon-blockquote-house-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35%;
+}
+
+.blockquote-copy {
+  // color: $blue;
+  position: relative;
+  font-style: italic;
+  // font-size: 1.875em;
+  line-height: 1.4;
+}
+
+.blockquote-cite {
+  margin: 20px auto;
+  display: block;
+  font-style: normal;
+  @include font-regular(16px, $light-black, 400, 1);
+}

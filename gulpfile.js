@@ -3,13 +3,14 @@
 var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
-    connect = require('gulp-connect'),
     imagemin = require('gulp-imagemin'),
     autoprefixer = require('gulp-autoprefixer'),
     concat = require('gulp-concat'),
-    watch = require('gulp-watch');
+    fileinclude = require('gulp-file-include'),
+    browserSync = require('browser-sync').create(),
+    reload      = browserSync.reload;
 
-// make vars for file paths
+// vars for file paths
 var paths = {
   source: 'src/assets/',
   dest: 'build/',
@@ -19,44 +20,47 @@ var paths = {
       './src/assets/js/bootstrap/alert.js',
       './src/assets/js/bootstrap/offcanvas.js'
     ]
+  },
+  templates: {
+    src: './src/templates/*.html'
+  },
+  includes: {
+    src: './src/includes/**/*.html'
   }
 };
 
-gulp.task('bootstrapJS', function() {
-  gulp.src(paths.js.bootstrap)
-    .pipe(concat('bootstrap.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest(paths.dest + 'js'))
-    .pipe(connect.reload())
+// file include
+gulp.task('fileinclude', function() {
+
+  // where the includes compile to
+  gulp.src(['./src/templates/*.html'])
+    .pipe(fileinclude({
+
+      // prefix for included file in template
+      prefix: '@@',
+
+      // path prefix for where the includes are
+      basepath: './src/includes/'
+    }))
+
+    // where the template compiles to
+    .pipe(gulp.dest('build/'))
+    .pipe(browserSync.stream());
 });
 
+gulp.task('include-watch', ['fileinclude'], reload);
+
+
+// process JS files and return to the stream
 gulp.task('scripts', function() {
   gulp.src(paths.source + 'js/*.js')
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest(paths.dest + 'js'))
-    .pipe(connect.reload())
+    .pipe(browserSync.stream());
 });
 
-
-gulp.task('connect', function() {
-  connect.server({
-    root: '.',
-    livereload: true
-  })
-});
-
-gulp.task('html', function() {
-  gulp.src('**/*.html')
-  .pipe(connect.reload())
-});
-
-// compress images
-gulp.task('smush', function() {
-  gulp.src('src/assets/images/*')
-  .pipe(imagemin())
-  .pipe(gulp.dest('build/images'))
-});
+gulp.task('js-watch', ['scripts'], reload);
 
 // minify css
 gulp.task('sass', function() {
@@ -67,13 +71,30 @@ gulp.task('sass', function() {
       cascade: false
     }))
     .pipe(gulp.dest(paths.dest + '/css'))
+    .pipe(browserSync.stream());
 });
 
-// watch for changes in css and js then compile
-gulp.task('watch', function() {
-  gulp.watch(paths.source + 'scss/**/*.scss', ['sass']);
-  gulp.watch(paths.source + 'js/*.js', ['scripts']);
-  gulp.watch('**/*.html', ['html']);
+
+
+// compress images
+gulp.task('smush', function() {
+  gulp.src('src/assets/images/*')
+  .pipe(imagemin())
+  .pipe(gulp.dest('build/images'))
 });
 
-gulp.task('default', ['sass', 'bootstrapJS', 'scripts', 'connect', 'watch']);
+
+gulp.task('default', ['fileinclude', 'scripts', 'sass'], function () {
+    // serve files from the build folder
+    browserSync.init({
+        server: {
+            baseDir: "./build/"
+        }
+    });
+    // watch files and run tasks
+    gulp.watch(paths.includes.src, ['include-watch']);
+    gulp.watch(paths.templates.src, ['include-watch']);
+    gulp.watch(paths.source + 'js/*.js', ['js-watch']);
+    gulp.watch(paths.source + 'scss/**/*.scss', ['sass']);
+});
+
