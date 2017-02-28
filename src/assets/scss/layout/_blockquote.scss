@@ -1,9 +1,27 @@
+blockquote {
+  border-left: none;
+}
+
 .blockquote-bg {
   background-color: $white-gray;
   background-image: url('/images/icon-blockquote-house-bg.svg');
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 35%;
+  background-position: center -10px;
+  background-size: 50%;
+
+  h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  .blockquote-copy {
+    margin: 30px 0;
+  }
+}
+
+.blockquote-rule {
+  border-color: $light-black;
+  margin-top: 2.75rem;
+  max-width: 235px;
 }
 
 .blockquote-copy {

@@ -55,7 +55,7 @@ h3 {
 }
 
 h4 {
-  @include font-regular(1.25em, $light-black, 400);
+  @include font-regular(1.25em, $light-black, 400, 1.25);
 }
 
 h5 {
@@ -79,7 +79,12 @@ h5 {
 }
 
 .margin-top-bottom {
-  margin: 2em 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.margin-top-3 {
+  margin-top: 3rem;
 }
 
 .icon-max-width {
