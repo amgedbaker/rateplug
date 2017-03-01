@@ -36,6 +36,7 @@ img{
 
 a {
   text-decoration: none;
+  color: $blue;
 }
 
 ul {
@@ -63,6 +64,10 @@ h4 {
 
 h5 {
   @include font-condensed(1.125rem, $light-black, 400);
+}
+
+h6 {
+  @include font-condensed(1rem, $light-black, 600);
 }
 
 .font-bold {

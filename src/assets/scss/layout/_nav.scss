@@ -242,13 +242,6 @@
   @include tablet-portrait-and-up {
     align-self: flex-end;
   }
-
-  h1 {
-    text-indent: -9999px;
-    position: absolute;
-    left: -999px;
-    opacity: 0;
-  }
 }
 
 .icon-logo {
