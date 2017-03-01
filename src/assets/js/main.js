@@ -6,6 +6,7 @@ var Main = {
     this.sidebarNav();
     this.handleWindowScroll();
     this.handleWindowResize();
+    this.carouselSlider();
   },
 
   navShrink: function() {
@@ -41,6 +42,10 @@ var Main = {
         _this.navShrink();
       }
     });
+  },
+
+  carouselSlider: function() {
+    $('.carousel').carousel();
   }
 
 };

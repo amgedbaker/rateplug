@@ -43,35 +43,38 @@ ul {
 }
 
 h1 {
-  @include font-regular(4.0625em, $light-black, 300, 1.1);
+  @include font-regular(4.0625rem, $light-black, 300, 1.1);
+  @include tablet-portrait-and-up {
+    font-size: 3.0625rem;
+  }
 }
 
 h2 {
-  @include font-regular(2.8125em, $light-black, 300, 1.05);
+  @include font-regular(2.8125rem, $light-black, 300, 1.05);
 }
 
 h3 {
-  @include font-regular(1.5em, $light-black, 300);
+  @include font-regular(1.5rem, $light-black, 300);
 }
 
 h4 {
-  @include font-regular(1.25em, $light-black, 400, 1.25);
+  @include font-regular(1.25rem, $light-black, 400, 1.25);
 }
 
 h5 {
-  @include font-condensed(1.125em, $light-black, 400);
+  @include font-condensed(1.125rem, $light-black, 400);
 }
 
 .font-bold {
-  @include font-condensed(1.125em, $light-black, 700);
+  @include font-condensed(1.125rem, $light-black, 700);
 }
 
 .font-quote-small {
-  @include font-regular(1.125em, $blue, 300i, 1.125);
+  @include font-regular(1.125rem, $blue, 300i, 1.125);
 }
 
 .font-quote-large {
-  @include font-regular(1.875em, $blue, 300i, 1.125);
+  @include font-regular(1.875rem, $blue, 300i, 1.125);
 }
 
 .blue-header {
@@ -90,4 +93,30 @@ h5 {
 .icon-max-width {
   width: 100%;
   max-width: 90px;
+}
+
+.pad-top {
+  padding-top: 3rem;
+  @include tablet-portrait-and-up {
+    padding-top: 160px;
+    padding-bottom: 65px;
+    margin-top: 60px;
+  }
+}
+
+.gray-text {
+  font-size: 18px;
+  line-height: 1.25;
+  color: $gray-text;
+}
+
+.bulleted-list {
+  padding-left: 1rem;
+  margin: 2rem 0;
+  li {
+    list-style-type: disc;
+    padding-left: 5px;
+    margin: 1rem 0;
+    line-height: 1.2;
+  }
 }

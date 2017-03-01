@@ -38,8 +38,34 @@
 
 }
 
-.btn-hollow {
+// this button has a transparent background with blue text and blue border
+.btn-blue-hollow {
+  background-color: transparent;
+  border: 1px solid $blue;
+  color: $blue;
+  &:hover, &:focus, &:visited {
+    background-color: transparent;
+    border: 1px solid $blue-hover;
+    color: $blue-hover;
+  }
+}
 
+// this button is transparent w/white text and borders
+.btn-white-hollow {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  &:hover, &:focus, &:visited {
+    background-color: transparent;
+    border: 1px solid #a3cef1;
+    color: #a3cef1;
+  }
+}
+
+.btn-medium {
+  max-width: 325px;
+  max-height: 50px;
+  padding: 15px;
 }
 
 .btn-lg {

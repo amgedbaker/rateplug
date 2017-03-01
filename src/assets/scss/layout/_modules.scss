@@ -1,0 +1,34 @@
+.single-icon-text-button-2up {
+  padding: 0 5%;
+  @include tablet-landscape-and-up {
+    padding: 0 9%;
+  }
+  p {
+    margin: 1.25rem 0;
+  }
+}
+
+// blue squares module
+.module-blue-squares {
+  font-size: 18px;
+}
+.square-blue-light {
+  background-color: $blue-hover;
+}
+
+.square-blue-dark {
+  background-color: $blue;
+}
+
+.inner {
+  color: white;
+  padding: 1.5rem 3rem;
+  @include center-block(500px);
+
+  h3 {
+    color: white;
+  }
+  .btn-hollow-on-blue {
+    margin: 20px 0;
+  }
+}

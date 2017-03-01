@@ -6,8 +6,12 @@ blockquote {
   background-color: $white-gray;
   background-image: url('/images/icon-blockquote-house-bg.svg');
   background-repeat: no-repeat;
-  background-position: center -10px;
-  background-size: 50%;
+  background-position: center;
+  background-size: 110%;
+  @include tablet-portrait-and-up {
+    background-position: center -10px;
+    background-size: 60%;
+  }
 
   h2 {
     margin-bottom: 1.25rem;

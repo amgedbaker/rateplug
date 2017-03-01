@@ -1,5 +1,6 @@
 .jumbotron {
   position: relative;
+  border-radius: 0 !important ;
   
   // everything inside of jumbotron, put on top of gradient and bg image
   * {
@@ -14,10 +15,6 @@
     margin-bottom: 40px;
     color: white;
   }
-}
-
-.jumbotron {
-  border-radius: 0;
 }
 
 .jumbotron-home {
@@ -48,12 +45,6 @@
     right: calc(-17.3333% - 20px);
     background-color: $light-black;
   }
-}
-
-.pad-top {
-  padding-top: 160px;
-  padding-bottom: 65px;
-  margin-top: 60px;
 }
 
 .bg-gradient {

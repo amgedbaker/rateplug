@@ -14,11 +14,11 @@ var gulp = require('gulp'),
 var paths = {
   source: 'src/assets/',
   dest: 'build/',
+//  bs: './src/assets/js/bootstrap/**/*.js',
   'js': {
     'bootstrap': [
-      './src/assets/js/bootstrap/affix.js',
-      './src/assets/js/bootstrap/alert.js',
-      './src/assets/js/bootstrap/offcanvas.js'
+      './src/assets/js/bootstrap/carousel.js',
+      './src/assets/js/bootstrap/transition.js'
     ]
   },
   templates: {
@@ -62,8 +62,22 @@ gulp.task('scripts', function() {
 
 gulp.task('js-watch', ['scripts'], reload);
 
+// process bootstrap's JS files.
+// note: if you add another file to the array above, you must restart gulp.
+gulp.task('bootstrapJS', function() {
+  console.log('bootstrap', paths.bs)
+  gulp.src(paths.js.bootstrap)
+    .pipe(concat('bootstrap.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(paths.dest + 'js'))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('bootstrapJS-watch', ['bootstrapJS'], reload);
+
 // minify css
 gulp.task('sass', function() {
+  console.log('sasss')
   return gulp.src(paths.source + 'scss/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefixer({
@@ -84,7 +98,7 @@ gulp.task('smush', function() {
 });
 
 
-gulp.task('default', ['fileinclude', 'scripts', 'sass'], function () {
+gulp.task('default', ['fileinclude', 'scripts', 'bootstrapJS', 'sass'], function () {
     // serve files from the build folder
     browserSync.init({
         server: {
@@ -96,5 +110,6 @@ gulp.task('default', ['fileinclude', 'scripts', 'sass'], function () {
     gulp.watch(paths.templates.src, ['include-watch']);
     gulp.watch(paths.source + 'js/*.js', ['js-watch']);
     gulp.watch(paths.source + 'scss/**/*.scss', ['sass']);
+    gulp.watch(paths.bs, ['bootstrapJS-watch']);
 });
 

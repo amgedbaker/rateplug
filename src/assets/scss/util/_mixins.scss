@@ -164,3 +164,11 @@
     @if $weight { font-weight: $weight; }
     @if $lh { line-height: $lh; }
 }
+
+
+@mixin center-block($max-width) {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @if $max-width { max-width: $max-width };
+}
