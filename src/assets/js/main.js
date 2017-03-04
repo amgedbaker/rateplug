@@ -6,7 +6,10 @@ var Main = {
     this.sidebarNav();
     this.handleWindowScroll();
     this.handleWindowResize();
+
+    // bootstrap javascript init
     this.carouselSlider();
+    this.dropdown();
   },
 
   navShrink: function() {
@@ -23,6 +26,7 @@ var Main = {
     sideslider.click(function(event){
       $(sel).toggleClass('in');
       $(sel2).toggleClass('out');
+      $('body').toggleClass('locked');
     });
   },
 
@@ -46,6 +50,11 @@ var Main = {
 
   carouselSlider: function() {
     $('.carousel').carousel();
+  },
+
+  dropdown: function() {
+    // $('.dropdown-toggle').dropdown('toggle');
+    $('.dropdown-toggle').dropdown();
   }
 
 };

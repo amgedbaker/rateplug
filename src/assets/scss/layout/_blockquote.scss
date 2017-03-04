@@ -2,6 +2,29 @@ blockquote {
   border-left: none;
 }
 
+.blockquote {
+
+  span {
+    position: relative;
+    &:before, &:after {
+      content: url('/images/icon-quote-up.svg');
+      position: absolute;
+      top: -15px;
+      left: -34px;
+      width: 26px;
+      height: 19px;
+    }
+
+    &:after {
+      content: url('/images/icon-quote-down.svg');
+      top: auto;
+      left: auto;
+      bottom: -5px;
+      right: -34px;
+    }
+  }
+}
+
 .blockquote-bg {
   background-color: $white-gray;
   background-image: url('/images/icon-blockquote-house-bg.svg');
@@ -10,7 +33,7 @@ blockquote {
   background-size: 110%;
   @include tablet-portrait-and-up {
     background-position: center -10px;
-    background-size: 60%;
+    background-size: 68.5%;
   }
 
   h2 {
@@ -29,10 +52,8 @@ blockquote {
 }
 
 .blockquote-copy {
-  // color: $blue;
   position: relative;
   font-style: italic;
-  // font-size: 1.875em;
   line-height: 1.4;
 }
 
@@ -41,4 +62,26 @@ blockquote {
   display: block;
   font-style: normal;
   @include font-regular(16px, $light-black, 400, 1);
+}
+
+.bquote-wrap {
+  padding: 0 5%;
+}
+
+.bquote-row {
+  position: relative;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dual-quote-divider {
+  @include tablet-portrait-and-up {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 1px;
+    height: calc(100% - 40px);
+    background-color: $light-gray;
+  }
+
 }

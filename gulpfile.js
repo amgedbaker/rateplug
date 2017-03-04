@@ -18,7 +18,8 @@ var paths = {
   'js': {
     'bootstrap': [
       './src/assets/js/bootstrap/carousel.js',
-      './src/assets/js/bootstrap/transition.js'
+      './src/assets/js/bootstrap/transition.js',
+      './src/assets/js/bootstrap/dropdown.js'
     ]
   },
   templates: {

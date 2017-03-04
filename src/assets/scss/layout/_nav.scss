@@ -47,7 +47,7 @@
   }
   .navbar-nav {
     float: none;
-    padding: 0.5em 0 2em 0;
+    padding: 0.5em 0 0 0;
     margin: 0;
     @include tablet-portrait-and-up {
       // border: 1px solid red;
@@ -62,6 +62,12 @@
         border-bottom: 1px solid $font-gray;
         padding: 10px 0;
       }
+      @include tablet-portrait-and-up {
+        padding: 10px 10px 0;
+      }
+      @include tablet-landscape-and-up {
+        padding: 10px 15px 0;
+      }
       &:hover {
         @include below-tablet-portrait {
           background-color: $white-gray;
@@ -75,7 +81,7 @@
       @include tablet-portrait-and-up {
         float: none;
         display: inline-block;
-        padding-top: 19px;
+        padding-top: 30px;
         margin: 2px 5px;
       }
       @include tablet-landscape-and-up {
@@ -86,13 +92,13 @@
       }
       > a {
           color: $light-black;
+          position: relative;
           @include tablet-portrait-and-up {
+            padding: 0;
             color: white;
-            padding: 10px 10px 0;
             font-size: 14px;
           }
           @include tablet-landscape-and-up {
-            padding: 10px 15px 0;
             font-size: 1em;
           }
           &:hover, &:active, &:focus, &:visited {
@@ -121,7 +127,6 @@
 }
 
 .item-wrap {
-  overflow: scroll;
   width: 100%;
   @include tablet-portrait-and-up {
     display: flex;
@@ -172,6 +177,27 @@
       &:hover {
         text-decoration: none;
       }
+    }
+  }
+}
+
+.nav-link {
+  @include tablet-portrait-and-up {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -3px;
+      height: 3px;
+      width: 0;
+      background: #fff;
+      transition: all 0.25s ease;
+    }
+    &:hover:after {
+      left: 0;
+      width: 100%;
+      transition: all 0.25s ease;
     }
   }
 }
@@ -242,6 +268,12 @@
   @include tablet-portrait-and-up {
     align-self: flex-end;
   }
+  h1 {
+    text-indent: -9999px;
+    position: absolute;
+    left: -999px;
+    opacity: 0;
+  }
 }
 
 .icon-logo {
@@ -275,6 +307,10 @@
   }
 }
 
+.locked {
+  overflow: hidden;
+}
+
 
 @media screen and (max-width: 768px) {
   .side-collapse-container{
@@ -289,7 +325,7 @@
     width: 100%;
     max-width: 600px;
     position: fixed;
-    overflow: hidden;
+    overflow: scroll;
     transition-delay: 0.1s;
     transition: 0.45s ease-out;
     transform: translateX(0);
