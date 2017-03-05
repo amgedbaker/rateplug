@@ -4,16 +4,30 @@
   
   // everything inside of jumbotron, put on top of gradient and bg image
   * {
-    color: white;
-    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 1;
+  }
+
+  p {
+    max-width: 800px;
+  }
+
+  h1, h2, h3, p {
+    color: white;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  a {
+    text-shadow: none;
   }
 
   h1 {
     margin-top: 50px;
     margin-bottom: 40px;
-    color: white;
+  }
+
+  .btn {
+    width: 325px;
   }
 }
 
@@ -36,15 +50,28 @@
     max-height: 150px;
     background-color: $green;
     top: 0;
-    left: calc(-17.3333% - 20px);
+    // left: calc(-17.3333% - 20px);
+    left: -40px;
     z-index: -1;
+    @include tablet-portrait-and-up {
+      left: -100px;
+    }
+    @media(min-width: 992px) {
+      left: -21%;
+    }
   }
   &:after {
     width: 70px;
     left: auto;
     // right: -60px;
-    right: calc(-17.3333% - 20px);
+    right: -40px;
     background-color: $light-black;
+    @include tablet-portrait-and-up {
+      right: -100px;
+    }
+    @media(min-width: 992px) {
+      right: -21%;
+    }
   }
 }
 

@@ -42,40 +42,150 @@
 // blue full width module on Agents page
 .light-blue-bg {
   background-color: $light-blue;
+  padding: 3rem 0;
 
   .btn {
-    margin-left: 0;
-    margin-right: 0;
+    @include tablet-portrait-and-up {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   .row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    @incluce tablet-portrait-and-up {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 
 .icon-square-wrap {
-  // border: 1px solid red;
-  // display: flex;
-  // flex-direction: row;
-  // align-items: center;
-  // justify-content: center;
+  margin-top: 3rem;
+  .col-xs-10 {
+    margin: 0 auto 2rem;
+    max-width: 250px;
+    float: none;
+    display: table;
+    vertical-align: middle;
+    @include tablet-landscape-and-up {
+      float: left;
+      margin-left: 8.33333%;
+    }
+  }
+
+  .box-content-wrap {
+    padding: 2rem 0;
+    display: table-cell;
+    vertical-align: middle;
+  }
 
   div {
-    max-height: 200px;
-    height: 100%;
     position: relative;
+    background: white;
+    @include tablet-portrait-and-up {
+      height: 200px;
+    }
   }
 }
 
 .link-box {
-  // display: block;
   background-color: white;
   height: 200px;
+  transition: right 0.25s ease;
   img {
     @include center-block(60px);
     height: auto;
   }
+  p {
+    margin-top: 1.25rem;
+    color: $green;
+    position: relative;
+    display: table;
+    margin: 1rem auto 0;
+    &:after {
+      content: '';
+      position: absolute;
+      right: -18px;
+      top: 50%;
+      background-image: url('/images/icon-text-link-arrow.svg');
+      background-repeat: no-repeat;
+      background-size: 10px 15px;
+      width: 10px;
+      height: 15px;
+      transform: translateY(-50%);
+      transition: right 0.25s ease;
+    }
+    &:hover {
+      color: $green-hover;
+      transition: right 0.25s ease;
+    }
+    &:hover:after {
+      right: -21px;
+      transition: right 0.25s ease;
+    }
+  }
 }
+
+// dark blue calculator module. calculator styles are in util/calculator.scss
+.dark-blue-bg {
+  background-color: $light-black;
+  padding: 2rem 0;
+  color: white;
+}
+
+// locations: enter zip code section
+.border-line {
+  position: relative;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  @include tablet-portrait-and-up {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-right: 2rem;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 88%;
+    height: 1px;
+    background-color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    @include tablet-portrait-and-up {
+      bottom: 0;
+      left: auto;
+      right: 0;
+      width: 1px;
+      height: 88%;
+      transform: translateX(0);
+    }
+  }
+}
+.zipcode-form-group {
+  label {
+    width: 100%;
+    margin-top: 0;
+  }
+  .btn {
+    width: 50%;
+    max-width: 200px;
+  }
+
+  .form-control {
+    border-radius: 0;
+    background-color: $dark-gray-hover;
+    border: none;
+    color: white;
+    height: 50px;
+    max-width: 190px;
+    margin: 1.5rem auto 1rem;
+    @include font-size(18px);
+    @media(min-width: 992px) {
+      margin: 1.5rem 1rem 1.5rem 0;
+    }
+  }
+}
+

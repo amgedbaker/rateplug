@@ -47,11 +47,9 @@
   }
   .navbar-nav {
     float: none;
-    padding: 0.5em 0 0 0;
     margin: 0;
     @include tablet-portrait-and-up {
-      // border: 1px solid red;
-      // margin: 7.5px -15px;
+      padding: 0.5em 0 0 0;
       text-align: right;
       height: 60px;
     }

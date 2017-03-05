@@ -37,53 +37,13 @@ img{
 a {
   text-decoration: none;
   color: $blue;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 ul {
   padding-left: 0;
-}
-
-h1 {
-  @include font-regular(3.0625rem, $light-black, 300, 1.1);
-  @include tablet-portrait-and-up {
-    font-size: 4.0625rem;
-  }
-}
-
-h2 {
-  @include font-regular(2.8125rem, $light-black, 300, 1.05);
-}
-
-h3 {
-  @include font-regular(1.5rem, $light-black, 300);
-}
-
-h4 {
-  @include font-regular(1.25rem, $light-black, 400, 1.25);
-}
-
-h5 {
-  @include font-condensed(1.125rem, $light-black, 400);
-}
-
-h6 {
-  @include font-condensed(1rem, $light-black, 600);
-}
-
-.font-bold {
-  @include font-condensed(1.125rem, $light-black, 700);
-}
-
-.font-quote-small {
-  @include font-regular(1.125rem, $blue, 300i, 1.125);
-}
-
-.font-quote-large {
-  @include font-regular(1.875rem, $blue, 300i, 1.125);
-}
-
-.blue-header {
-  color: $blue;
 }
 
 .margin-top-bottom {
@@ -129,4 +89,29 @@ h6 {
     margin: 1rem 0;
     line-height: 1.2;
   }
+}
+
+.black-bg {
+  background-color: $light-black;
+  padding: 3.5rem 0;
+
+  h3 {
+    color: white;
+    margin-top: 0;
+  }
+}
+
+.pad-left {
+  padding-left: 1.5rem;
+}
+
+.circle-num {
+  background: white;
+  width: 60px;
+  display: inline-block;
+  color: $blue;
+  border-radius: 50%;
+  vertical-align: middle;
+  padding: 17px 0;
+  margin-right: 1.5rem;
 }

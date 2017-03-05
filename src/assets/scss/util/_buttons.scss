@@ -6,6 +6,7 @@
   border: none;
   transition: all 0.25s ease;
   margin: 20px auto;
+  font-size: 16px;
 
   &:hover {
     transition: all 0.25s ease;
@@ -17,25 +18,32 @@
   // max-width: 400px;
   background-color: $green;
   color: $light-black;
-  &:hover, &:focus, &:visited {
+  &:hover, &:focus {
     background-color: $green-hover;
     color: $light-black;
   }
+
+  // &[role="button"]:hover {
+  //   background-color: $green-hover !important;
+  //   color: $light-black;
+  // }
 }
 
 .btn-hollow-green {
-  background-color: white;
+  background-color: transparent;
   border: 1px solid $green;
   color: $green;
   &:hover, &:focus, &:visited {
     color: $light-black;
     border: 1px solid $green-hover;
-    background-color: white;
+    background-color: transparent;
   }
 }
 
-.btn-fill {
-
+.btn-hollow-green-on-black {
+  &:hover {
+    color: $green-hover;
+  }
 }
 
 // this button has a transparent background with blue text and blue border
@@ -81,4 +89,10 @@
 
 .btn-lg {
   padding: 16px;
+}
+
+.btn-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 330px;
 }
