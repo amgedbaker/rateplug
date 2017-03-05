@@ -159,15 +159,22 @@
       left: auto;
       right: 0;
       width: 1px;
-      height: 88%;
+      height: 100%;
       transform: translateX(0);
     }
   }
 }
 .zipcode-form-group {
+  @include tablet-portrait-and-up {
+    padding-left: 1.5rem;
+  }
   label {
     width: 100%;
     margin-top: 0;
+    @include tablet-portrait-and-up {
+      text-align: left;
+      margin-left: 1rem;
+    }
   }
   .btn {
     width: 50%;
@@ -180,10 +187,10 @@
     border: none;
     color: white;
     height: 50px;
-    max-width: 190px;
-    margin: 1.5rem auto 1rem;
+    max-width: 130px;
+    margin: 0.5rem auto;
     @include font-size(18px);
-    @media(min-width: 992px) {
+    @include tablet-portrait-and-up {
       margin: 1.5rem 1rem 1.5rem 0;
     }
   }
