@@ -1,15 +1,27 @@
 .card-section {
-  margin: 2rem 0;
+  margin: 2rem auto;
+}
+
+.well {
+  box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.15);
+  background-color: white;
+  border: none;
+  border-radius: 0;
+  padding: 15px;
 }
 
 .card {
-  box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.25);
-
-  img {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    @include center-block(200px);
+  padding-left: 10px;
+  padding-right: 10px;
+  li {
+    padding-bottom: 8px;
   }
+}
+
+.org-logo-icon {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  @include center-block(200px);
 }
 
 .product-heading {
@@ -17,13 +29,45 @@
   @include font-condensed(1.125rem, $light-black, 600, 1.25);
 }
 
+.product-item {
+  @include font-condensed(1.125rem, $light-black, 400, 1.25);
+}
+
 .bottom-link {
   display: table;
-  border: 1px solid;
-  width: 100%;
+  width: calc(100% - 30px);
+  text-align: center;
+  padding: 15px 0;
+  margin: 0 auto;
+  border-top: 1px solid $blue-hover;
+
+  a {
+    margin: 12px auto;
+    font-weight: 300;
+    letter-spacing: 1.25px;
+    &:after {
+      background-image: url('/images/icon-arrow-blue.svg');
+
+    }
+    &:hover {
+      color: $blue-hover;
+    }
+  }
 }
 
 .card-title {
   padding: 15px;
   background-color: $light-gray-hover;
+}
+
+.tooltip-icon-container {
+  display: block;
+}
+
+.info-icon {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-right: -10px;
 }

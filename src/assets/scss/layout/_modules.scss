@@ -99,31 +99,13 @@
     height: auto;
   }
   p {
-    margin-top: 1.25rem;
-    color: $green;
-    position: relative;
-    display: table;
     margin: 1rem auto 0;
+    color: $green;
     &:after {
-      content: '';
-      position: absolute;
-      right: -18px;
-      top: 50%;
       background-image: url('/images/icon-text-link-arrow.svg');
-      background-repeat: no-repeat;
-      background-size: 10px 15px;
-      width: 10px;
-      height: 15px;
-      transform: translateY(-50%);
-      transition: right 0.25s ease;
     }
     &:hover {
       color: $green-hover;
-      transition: right 0.25s ease;
-    }
-    &:hover:after {
-      right: -21px;
-      transition: right 0.25s ease;
     }
   }
 }

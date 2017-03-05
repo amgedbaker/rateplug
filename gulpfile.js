@@ -19,7 +19,9 @@ var paths = {
     'bootstrap': [
       './src/assets/js/bootstrap/carousel.js',
       './src/assets/js/bootstrap/transition.js',
-      './src/assets/js/bootstrap/dropdown.js'
+      './src/assets/js/bootstrap/dropdown.js',
+      './src/assets/js/bootstrap/tooltip.js',
+      './src/assets/js/bootstrap/popover.js'
     ]
   },
   templates: {

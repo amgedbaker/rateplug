@@ -10,6 +10,7 @@ var Main = {
     // bootstrap javascript init
     this.carouselSlider();
     this.dropdown();
+    this.popover();
   },
 
   navShrink: function() {
@@ -55,6 +56,10 @@ var Main = {
   dropdown: function() {
     // $('.dropdown-toggle').dropdown('toggle');
     $('.dropdown-toggle').dropdown();
+  },
+
+  popover: function() {
+    $('[data-toggle="popover"]').popover();
   }
 
 };

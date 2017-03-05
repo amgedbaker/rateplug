@@ -117,3 +117,28 @@ ul {
   margin-right: 1.5rem;
   text-align: center;
 }
+
+// the text link with the right arrow
+.text-link-arrow {
+  position: relative;
+  display: table;
+  &:after {
+    content: '';
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    background-repeat: no-repeat;
+    background-size: 10px 15px;
+    width: 10px;
+    height: 15px;
+    transform: translateY(-50%);
+    transition: right 0.25s ease;
+  }
+  &:hover {
+    transition: right 0.25s ease;
+  }
+  &:hover:after {
+    right: -21px;
+    transition: right 0.25s ease;
+  }
+}
