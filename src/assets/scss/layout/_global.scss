@@ -142,3 +142,19 @@ ul {
     transition: right 0.25s ease;
   }
 }
+
+
+// popover override styles
+.popover {
+  border-top: 4px solid $light-blk-btn-hover;
+  max-width: 300px;
+  width: 300px;
+  top: -166px !important;
+  left: -64px !important;
+  border-radius: 0;
+  background-color: $light-gray-hover;
+}
+
+.popover.top>.arrow:after {
+  border-top-color: $light-gray-hover;
+}

@@ -18,6 +18,13 @@
   }
 }
 
+.popover-content {
+  li {
+    display: inline-block;
+    width: 50%;
+  }
+}
+
 .org-logo-icon {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -60,14 +67,26 @@
   background-color: $light-gray-hover;
 }
 
-.tooltip-icon-container {
-  display: block;
-}
-
 .info-icon {
   float: right;
   width: 20px;
   height: 20px;
   margin-top: -10px;
   margin-right: -10px;
+}
+
+.popover-content {
+  padding: 0;
+   h4 {
+    background-color: white;
+    margin: 0;
+    padding: 12px 14px;
+    @include font-condensed(0.875rem, $light-black, 600);
+  }
+  ul {
+    padding: 9px 14px;
+  }
+  li {
+    @include font-condensed(0.875rem, $light-black, 400);
+  }
 }

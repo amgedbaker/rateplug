@@ -54,7 +54,6 @@ var Main = {
   },
 
   dropdown: function() {
-    // $('.dropdown-toggle').dropdown('toggle');
     $('.dropdown-toggle').dropdown();
   },
 
