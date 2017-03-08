@@ -100,13 +100,6 @@
   }
   p {
     margin: 1rem auto 0;
-    color: $green;
-    &:after {
-      background-image: url('/images/icon-text-link-arrow.svg');
-    }
-    &:hover {
-      color: $green-hover;
-    }
   }
 }
 
@@ -183,4 +176,21 @@
   background-color: $light-blue;
   padding: 3rem 0;
 }
+
+.h-p-link {
+  border-top: 4px solid $blueGray;
+  a {
+    margin: 2.5rem auto 1.5rem;
+  }
+  h3 {
+    min-height: 50px;
+    margin-bottom: 2rem;
+  }
+
+  &:nth-child(2) {
+    border-top: 4px solid $light-black;
+  }
+}
+
+
 

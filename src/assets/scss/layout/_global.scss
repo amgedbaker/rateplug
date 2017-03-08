@@ -25,6 +25,16 @@ body {
   }
 }
 
+/* centered columns styles */
+.row-center {
+    text-align:center;
+}
+.col-center {
+    display:inline-block;
+    float:none;
+    margin-right:-4px;
+}
+
 
 li {
 	list-style: none;
@@ -140,6 +150,28 @@ ul {
   &:hover:after {
     right: -21px;
     transition: right 0.25s ease;
+  }
+}
+
+.text-link-arrow-green {
+  color: $green;
+  &:after {
+    background-image: url('/images/icon-text-link-arrow.svg');
+  }
+  &:hover {
+    color: $green-hover;
+  }
+}
+
+.text-link-arrow-blue {
+  font-weight: 300;
+  letter-spacing: 1.25px;
+  &:after {
+    background-image: url('/images/icon-arrow-blue.svg');
+
+  }
+  &:hover {
+    color: $blue-hover;
   }
 }
 

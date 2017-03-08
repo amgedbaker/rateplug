@@ -50,15 +50,6 @@
 
   a {
     margin: 12px auto;
-    font-weight: 300;
-    letter-spacing: 1.25px;
-    &:after {
-      background-image: url('/images/icon-arrow-blue.svg');
-
-    }
-    &:hover {
-      color: $blue-hover;
-    }
   }
 }
 
