@@ -1,27 +1,110 @@
+.calculator-top {
+  background-color: $light-black;
+  color: white;
+  display: table;
+  width: 100%;
+  margin-bottom: 1rem;
+
+  h4 {
+    color: white;
+  }
+
+  a {
+    color: white;
+    &:hover {
+      color: $blue-hover;
+    }
+  }
+
+  img {
+    @include center-block(150px);
+    display: inline-block;
+    margin-left: 3%
+  }
+}
+
+.calc-top-section {
+  border: 1px solid;
+  display: table-cell;
+  vertical-align: middle;
+
+  &:first-child {
+    width: 65%;
+
+    h4 {
+      display: inline-block;
+      margin-left: 3%;
+    }
+  }
+
+  &:last-child {
+    width: 35%;
+  }
+
+  ul {
+    width: 190px;
+    float: right;
+    margin: 0;
+  }
+
+  li {
+    font-size: 14px;
+    margin: 7px 0;
+  }
+}
+
 .calculator {
 
   table { 
     width: 100%; 
-    border-collapse: collapse; 
+    border-collapse: collapse;
+    border: 1px solid $light-gray;
+    border-bottom: none;
+    font-weight: 600;
   }
-  /* Zebra striping */
-  tr:nth-of-type(odd) { 
+
+  td:first-child() {
+    text-transform: uppercase;
+  }
+
+  tr:nth-of-type(1), tr:nth-of-type(3) { 
     background: #eee; 
   }
+  tr:last-child() {
+    td {
+      border: none;
+    }
+  }
   th { 
-    background: #333; 
-    color: white; 
+    text-transform: uppercase;
+    background-color: white;
     font-weight: bold; 
     text-align: left;
   }
   td, th { 
     padding: 6px; 
-    border: 1px solid #ccc; 
+    border-left: 1px solid $light-gray; 
     text-align: left; 
   }
 
+  // [data-th="Key Info"] {
+  //   padding-left: 8px;
+  // }
+
   .green-bg {
     background-color: $green-hover;
+  }
+
+  .blue-text {
+    td {
+      color: $blue-hover;
+    }
+  }
+
+  .green-text {
+    td {
+      color: $green;
+    }
   }
 
 

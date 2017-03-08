@@ -77,8 +77,37 @@
               </ul>
             </div>
             <ul class="nav navbar-nav">
-              <li><a href="#" class="nav-link">Loan Officers</a></li>
-              <li><a href="#" class="nav-link">Agents</a></li>
+
+              <!-- The ID and HREF must match -->
+              <li class="dropdown" id="menu1">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
+                  Loan Officers
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+
+              <!-- The ID and HREF must match -->
+              <li class="dropdown" id="menu2">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#menu2">
+                  Agents
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+
               <li><a href="#" class="nav-link">Locations</a></li>
               <li><a href="#" class="nav-link">Pricing</a></li>
               <li><a href="#" class="nav-link">Blog</a></li>
@@ -104,21 +133,99 @@
   </div>
 </div>
 
-    <div class="container-fluid">
+
+    <footer class="container-fluid">
   <div class="row">
-    <div class="jumbotron bg-gradient pad-top jumbotron-home">
-      <div class="col-md-10 col-md-offset-1 no-float">
-        <h1><span class="blocks">We empower buyers and create new opportunities for you.</span></h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>
-          <a class="btn btn-lg btn-solid-green" href="#" role="button">Get Started</a>
-        </p>
+    <div class="container">
+    
+       <!-- first column -->
+      <div class="col-xs-12 col-sm-6 col-md-3 footer-column no-pad-left text-uppercase left-links">
+        <ul>
+          <li><a href="#">Loan Officers</a></li>
+          <li><a href="#">Agents</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Blog</a></li>
+          <li class="social-icons">
+            <a href="#"><img src="/images/icon-facebook.svg" alt="facebook icon" class="facebook-icon"/><span class="sr-only">facebook</span></a>
+            <a href="#"><img src="/images/icon-twitter.svg" alt="twitter icon" class="twitter-icon"/><span class="sr-only">twitter</span></a>
+            <a href="#"><img src="/images/icon-linkedin.svg" alt="linkedin icon" class="linkedin-icon"/><span class="sr-only">linkedin</span></a>
+          </li>
+        </ul>
       </div>
+
+      <!-- second column -->
+      <div class="col-xs-12 col-sm-6 col-md-3 footer-column no-pad-left text-uppercase">
+        <h6>Locations:</h6>
+        <div class="locations">
+          <ul class="location-col col-xs-2 no-pad-left">
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+          </ul>
+
+          <ul class="location-col col-xs-2 no-pad-left">
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+          </ul>
+
+          <ul class="location-col col-xs-2 no-pad-left">
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+          </ul>
+
+          <ul class="location-col col-xs-2 no-pad-left">
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+          </ul>
+
+          <ul class="location-col col-xs-2 no-pad-left">
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+          </ul>
+          
+        </div>
+      </div>
+
+      <!-- third column -->
+      <div class="col-xs-12 col-sm-6 col-md-4 footer-column no-pad-left footer-contact">
+        <div class="footer-contact-wrapper">
+          <h6 class="text-uppercase">Address:</h6>
+          <p>RatePlug, LLC</p>
+          <p>1700 N Park St, Suite 107 </p>
+          <p>Naperville, Illinois 60563</p>
+        </div>
+        <div class="footer-contact-wrapper">
+          <h6 class="text-uppercase">Call Us:</h6>
+          <p>Phone: (877) 710-0808</p>
+          <p>Fax: (630) 848-1337</p>
+          <p>Phone: (877) 710-0808</p>
+        </div>
+        <div class="footer-contact-wrapper">
+          <img src="images/icon-equal-housing.svg" class="org-icon equal-icon" />
+          <img src="images/icon-mba.svg" class="org-icon mba-icon" />
+          <img src="images/icon-ccsafe.svg" class="org-icon ccsafe-icon" />
+        </div>
+      </div>
+
     </div>
 
   </div>
-</div> <!-- /container -->
-
+</footer>
 
     </body>
 
@@ -126,7 +233,7 @@
 
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
   <script src="/js/main.min.js"></script>
 
 
