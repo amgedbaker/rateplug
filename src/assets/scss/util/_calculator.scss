@@ -1,3 +1,21 @@
+.calc-section-wrapper {
+  background-color: $light-gray-hover;
+  padding: 3rem 0;
+}
+
+.calc-icon {
+  max-width: 70px;
+  margin-top: 2rem;
+}
+.calc-intro-text {
+  margin-bottom: 2rem;
+  p {
+    font-size: 18px;
+  }
+  h3 {
+    margin: 2rem 0;
+  }
+}
 .calculator-top {
   background-color: $light-black;
   color: white;
@@ -17,19 +35,24 @@
   }
 
   img {
-    @include center-block(150px);
+    @include center-block(110px);
     display: inline-block;
     margin-left: 3%
   }
 }
 
 .calc-top-section {
-  border: 1px solid;
-  display: table-cell;
+  display: block;
   vertical-align: middle;
+  @media(min-width: 1200px) {
+    display: table-cell;
+  }
 
   &:first-child {
-    width: 65%;
+    width: 100%;
+    @media(min-width: 1200px) {
+      width: 65%;
+    }
 
     h4 {
       display: inline-block;
@@ -38,13 +61,23 @@
   }
 
   &:last-child {
-    width: 35%;
+    width: 100%;
+    @media(min-width: 1200px) {
+      width: 35%;
+    }
   }
 
   ul {
-    width: 190px;
-    float: right;
-    margin: 0;
+    margin: 12px auto;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 7px 0;
+    @media(min-width: 1200px) {
+      width: 190px;
+      float: right;
+      margin: 0;
+    }
   }
 
   li {
@@ -53,14 +86,27 @@
   }
 }
 
-.calculator {
+.button-wrap {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin: 25px 0 0;
+}
 
+.calculator {
+  background-color: white;
   table { 
     width: 100%; 
     border-collapse: collapse;
     border: 1px solid $light-gray;
     border-bottom: none;
     font-weight: 600;
+  }
+
+  [data-th="Key Info"], .pad-l {
+    @media (min-width: 580px) {
+      padding-left: 0.75rem;
+    }
   }
 
   td:first-child() {
@@ -85,11 +131,8 @@
     padding: 6px; 
     border-left: 1px solid $light-gray; 
     text-align: left; 
+    font-size: 14px;
   }
-
-  // [data-th="Key Info"] {
-  //   padding-left: 8px;
-  // }
 
   .green-bg {
     background-color: $green-hover;
@@ -110,12 +153,10 @@
 
   @media only screen and (max-width: 580px)  {
 
-    /* Force table to not be like tables anymore */
     table, thead, tbody, th, td, tr { 
       display: block; 
     }
     
-    /* Hide table headers (but not display: none;, for accessibility) */
     thead tr { 
       position: absolute;
       top: -9999px;
@@ -125,7 +166,6 @@
     tr { border: 1px solid #ccc; }
     
     td { 
-      /* Behave  like a "row" */
       border: none;
       border-bottom: 1px solid #eee; 
       position: relative;
@@ -133,9 +173,7 @@
     }
     
     td:before { 
-      /* Now like a table header */
       position: absolute;
-      /* Top/left values mimic padding */
       top: 6px;
       left: 6px;
       width: 45%; 
@@ -155,4 +193,66 @@
     td:nth-of-type(7):before { content: attr(data-th)": ";  }
     td:nth-of-type(8):before { content: attr(data-th)": ";  }
   }
+}
+
+.calculator-bottom {
+  background-color: white;
+  border: 1px solid $light-gray;
+  border-top: none;
+  h4 {
+    margin: 0;
+    padding: 1.5rem 0;
+    font-weight: bold;
+  }
+  input {
+    background-color: $light-gray-hover;
+    border-radius: 0;
+    border: 0;
+    margin: 0 10px 0 0;
+  }
+  select {
+    width: 25%;
+    max-width: 100px;
+  }
+  .form-control {
+    width: 44%;
+  }
+  label {
+    width: 100%;
+    margin: 10px;
+    font-weight: 400;
+  }
+  .form-group {
+    &:first-child {
+      width: 40%;
+      margin-left: 15px;
+    }
+    &:nth-of-type(2) {
+      width: 55%;
+    }
+  }
+  .btn {
+    margin: 3px auto 20px;
+    width: 200px;
+  }
+}
+
+#downpayment {
+  width: 40%;
+  max-width: 150px;
+}
+
+#price {
+  width: 70%;
+}
+.ib {
+  display: inline-block;;
+}
+
+.dollar-sign {
+  color: $blueGray-hover;
+  font-size: 20px;
+  font-weight: bold;
+  text-indent: -5px;
+  padding-right: 5px;
 }
