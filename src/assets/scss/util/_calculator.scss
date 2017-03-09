@@ -3,6 +3,12 @@
   padding: 3rem 0;
 }
 
+.calc-no-pad {
+  @include tablet-portrait-and-up {
+    padding: 0;
+  }
+}
+
 .calc-icon {
   max-width: 70px;
   margin-top: 2rem;
@@ -199,6 +205,7 @@
   background-color: white;
   border: 1px solid $light-gray;
   border-top: none;
+  overflow: hidden;
   h4 {
     margin: 0;
     padding: 1.5rem 0;

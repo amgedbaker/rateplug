@@ -53,7 +53,7 @@
 @import "bootstrap/close";
 
 // Components w/ JavaScript
-// @import "bootstrap/modals";
+@import "bootstrap/modals";
 @import "bootstrap/tooltip";
 @import "bootstrap/popovers";
 @import "bootstrap/carousel";
@@ -79,3 +79,4 @@
 @import 'layout/footer';
 @import 'util/calculator';
 @import 'util/cards';
+@import 'layout/carousel-overrides';

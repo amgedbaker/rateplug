@@ -1,0 +1,61 @@
+// this styling is to make the carousel display three at a time
+.carousel {
+  margin: 3rem 0;
+  .carousel-inner {
+    > .item{
+      transition: 500ms ease-in-out left;
+    }
+    .active{
+      &.left{
+        left:-33%;
+      }
+      &.right{
+        left:33%;
+      }
+    }
+    .next{
+      left: 33%;
+    }
+    .prev{
+      left: -33%;
+    }
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      > .item{
+        // use your favourite prefixer here
+        transition: 500ms ease-in-out left;
+        transition: 500ms ease-in-out all;
+        backface-visibility: visible;
+        transform: none!important;
+      }
+    }
+  }
+  .carousel-control{
+    &.left, &.right{
+      background-image: none;
+    }
+  }
+}
+
+// arrow indicators
+.arrow-icon-carousel {
+  height: 100%;
+  width: 20px;
+}
+
+.carousel-control {
+  &.left {
+    @include tablet-portrait-and-up {
+      left: -11%;
+    }
+  }
+  &.right {
+    @include tablet-portrait-and-up {
+      right: -11%;
+    }
+  }
+}
+
+// move the modal below the nav
+  .modal-dialog {
+    margin: 90px auto;
+  }
