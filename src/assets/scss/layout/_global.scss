@@ -190,3 +190,23 @@ ul {
 .popover.top>.arrow:after {
   border-top-color: $light-gray-hover;
 }
+
+// position modal in the center
+.modal {
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+.modal-open .modal {
+  overflow: initial;
+}
+
+.close-modal-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+  opacity: 1;
+}

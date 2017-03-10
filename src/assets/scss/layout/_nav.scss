@@ -335,3 +335,27 @@
     transform: translateX(-100%);
   }
 }
+
+
+#signup-modal {
+
+}
+
+.modal-container {
+  background-color: white;
+  padding: 3rem 0;
+  text-align: center;
+  label {
+    color: $light-black;
+  }
+  @include tablet-portrait-and-up {
+    // .zipcode-form-group label {
+    //   text-align: center;
+    // }
+    // div.col-xs-12 {
+    //   h3, label {
+    //     margin-left: calc(-50px - 1.5rem);
+    //   }
+    // }
+  }
+}

@@ -43,9 +43,11 @@
   img {
     @include center-block(110px);
     display: inline-block;
-    margin-left: 3%
+    margin-left: 8%
   }
 }
+
+
 
 .calc-top-section {
   display: block;
@@ -56,8 +58,10 @@
 
   &:first-child {
     width: 100%;
+    text-align: center;
+    margin: 2rem 0 1.5rem;
     @media(min-width: 1200px) {
-      width: 65%;
+      width: 23%;
     }
 
     h4 {
@@ -219,7 +223,17 @@
   }
   select {
     width: 25%;
-    max-width: 100px;
+    max-width: 80px;
+    apearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    height: 35px;
+    background-image: url('../images/icon-select-down.svg');
+    background-repeat: no-repeat;
+    background-size: 27px;
+    background-position: 43px center;
+    border-color: $blue;
   }
   .form-control {
     width: 44%;

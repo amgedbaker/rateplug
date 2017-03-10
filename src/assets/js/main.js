@@ -77,9 +77,10 @@ var Main = {
     $('[data-toggle="popover"]').popover();
   },
 
-  // modal: function() {
+  modal: function() {
     // $('#sample-modal').modal();
-  // }
+    $('#signup-modal').modal();
+  }
 
 };
 

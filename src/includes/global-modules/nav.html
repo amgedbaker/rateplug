@@ -45,7 +45,7 @@
               <li><a href="#" class="nav-link">Locations</a></li>
               <li><a href="#" class="nav-link">Pricing</a></li>
               <li><a href="#" class="nav-link">Blog</a></li>
-              <li class="sign-up sign-up-nav hidden-xs"><button class="btn btn-primary btn-lg btn-solid-green">Sign Up</button></li>
+              <li class="sign-up sign-up-nav hidden-xs"><button class="btn btn-primary btn-lg btn-solid-green" data-toggle="modal" data-target="#signup-modal">Sign Up</button></li>
               <li class="visible-xs no-hover">
                 <ul class="upper-nav upper-nav-container-mobile">
                   <li><a href="#">Company</a></li>
@@ -58,11 +58,44 @@
               <a href="#" class="login">Login</a>
             </div>
             <div class="sign-up-mobile">
-              <button class="btn btn-primary btn-lg btn-block btn-solid-green visible-xs">Sign Up</button>
+              <button class="btn btn-primary btn-lg btn-block btn-solid-green visible-xs" data-toggle="modal" data-target="#signup-modal">Sign Up</button>
             </div>
           </div>
         </nav>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- The Sign Up Modal -->
+<div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="signup-modalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close close-modal-icon" data-dismiss="modal" aria-label="Close">
+        <img src="images/icon-close.svg" aria-hidden="true" />
+      </button>
+      <div class="col-xs-12 modal-container">
+        <div class="col-xs-12">
+          <h3><span class="circle-num">1</span>Are you a loan officer or agent?</h3>
+          <div class="btn-wrapper">
+            <button class="btn btn-primary btn-lg btn-block btn-hollow-green btn-hollow-green-on-black">I'm an agent</button>
+            <button class="btn btn-primary btn-lg btn-block btn-hollow-green btn-hollow-green-on-black">I'm a Loan Officer</button>
+          </div>
+        </div>
+        <div class="col-xs-12">
+
+          <form class="form-inline zipcode-form-group">
+            <div class="form-group">
+              <label for="zipcode" class="h3"><span class="circle-num">2</span>What is your zipcode?</label>
+              <input type="text" class="form-control" id="" placeholder="Enter Zip">
+              <button type="submit" class="btn btn-primary btn-lg btn-blue-hollow">Submit</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+
     </div>
   </div>
 </div>
