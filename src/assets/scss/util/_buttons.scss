@@ -89,6 +89,11 @@
 
 .btn-lg {
   padding: 12px 16px;
+  max-width: 300px;
+}
+
+.btn-wide {
+  min-width: 275px;
 }
 
 .btn-wrapper {

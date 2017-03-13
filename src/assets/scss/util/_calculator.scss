@@ -221,19 +221,11 @@
     border: 0;
     margin: 0 10px 0 0;
   }
-  select {
+  select.form-control {
     width: 25%;
     max-width: 80px;
-    apearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    position: relative;
     height: 35px;
-    background-image: url('../images/icon-select-down.svg');
-    background-repeat: no-repeat;
-    background-size: 27px;
-    background-position: 43px center;
-    border-color: $blue;
+    background-position: 85% center;
   }
   .form-control {
     width: 44%;

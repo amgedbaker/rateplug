@@ -1,0 +1,38 @@
+.block {
+  margin-bottom: 1.5rem;
+  max-width: 320px;
+  color: white;
+  background-color: $blue;
+  padding: 10px 20px 20px;
+  width: 100%;
+
+  h4 {
+    margin-bottom: 25px;
+    color: white;
+    font-weight: 300;
+  }
+
+  p {
+    line-height: 1.35;
+  }
+}
+
+.gray-bg {
+  background-color: $white-gray-hover;
+}
+
+.block-inner {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.block-left {
+  color: $light-black;
+  margin-right: 15%;
+}
+
+.block-left, .block-right {
+  li {
+    margin-bottom: 17px;
+  }
+}

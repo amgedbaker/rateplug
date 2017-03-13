@@ -192,5 +192,30 @@
   }
 }
 
+// pricing page
+.spacer {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    right: 50%;
+    height: 100%;
+    top: 50%;
+    width: 1px;
+    left: -22.66666%;
+    background-color: $light-black;
+    transform: translateY(-50%);
+  }
+}
 
+.pricing-blue {
+  .button-wrap {
+    margin: 0;
+  }
+}
+
+.three-up {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
 
