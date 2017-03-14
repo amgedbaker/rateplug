@@ -1,0 +1,33 @@
+.member-cards {
+  padding: 3rem 0;
+  .well {
+    min-height: auto;
+  }
+  .link-list {
+    padding-bottom: 10px;
+    a {
+      padding: 12px 15px;
+      width: 100%;
+      display: block;
+      &:hover {
+        background-color: $light-gray-hover;
+      }
+      &:hover:after {
+        right: 15px;
+      }
+      &:after {
+        right: 18px;
+      }
+    }
+  }
+}
+
+.blue-top {
+  background-color: $blue-hover;
+}
+
+.profile-image {
+  border-radius: 50%;
+  margin: 25px 0;
+  @include center-block(180px);
+}

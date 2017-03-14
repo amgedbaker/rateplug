@@ -199,10 +199,43 @@ ul {
 .modal {
   top: 45%;
   transform: translateY(-50%);
+
+  .circle-num {
+    border: 1px solid $light-gray;
+  }
+}
+
+.close {
+  width: 33px;
+}
+
+.modal-inner {
+  max-width: 85%;
+  margin: 0 auto;
+  h3, label {
+    text-align: left;
+  }
+  .zipcode-form-group {
+    margin-top: 40px;
+    padding-left: 0;
+    border-top: 1px solid $light-gray;
+    padding-top: 40px;
+    label {
+      margin-left: 0;
+    }
+    .form-group {
+      width: 100%;
+    }
+    .form-control {
+      background-color: $light-gray-hover;
+      color: $light-black;
+    }
+  }
 }
 
 .modal-open .modal {
   overflow: initial;
+  z-index: 1090;
 }
 
 .close-modal-icon {
