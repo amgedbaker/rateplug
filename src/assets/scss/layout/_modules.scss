@@ -175,20 +175,22 @@
 .blue-3-up {
   background-color: $light-blue;
   padding: 3rem 0;
+  .h-p-link {
+    &:nth-child(2) {
+      border-top: 4px solid $light-black;
+    }
+  }
 }
 
 .h-p-link {
   border-top: 4px solid $blueGray;
+  vertical-align: top;
   a {
     margin: 2.5rem auto 1.5rem;
   }
   h3 {
     min-height: 50px;
     margin-bottom: 2rem;
-  }
-
-  &:nth-child(2) {
-    border-top: 4px solid $light-black;
   }
 }
 

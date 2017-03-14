@@ -31,3 +31,51 @@
   margin: 25px 0;
   @include center-block(180px);
 }
+
+.stats {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  .h-p-link {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    a {
+      margin: 1rem 0;
+      width: 100%;
+      padding-right: 5rem;
+    }
+    li {
+      margin: 1rem;
+      display: inline-block;
+      width: 100%;
+      position: relative;
+      font-weight: 600;
+    }
+    span {
+      position: absolute;
+      font-weight: 300;
+    }
+  }
+}
+
+.stat-num {
+  right: 65px;
+}
+
+.display-num {
+  right: 10px;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: $blue-hover;
+  right: 20px;
+}
+
+.dot-blue-light {
+  background-color: $blueGray-hover;
+}
+.dot-blue-dark {
+  background-color: $light-blk-btn-hover;
+}
