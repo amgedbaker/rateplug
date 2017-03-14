@@ -1,7 +1,13 @@
 .member-cards {
   padding: 3rem 0;
+  li {
+    font-size: 18px;
+  }
   .well {
     min-height: auto;
+  }
+  h4 {
+    @include font-size(24px);
   }
   .link-list {
     padding-bottom: 10px;
@@ -78,4 +84,15 @@
 }
 .dot-blue-dark {
   background-color: $light-blk-btn-hover;
+}
+
+.lender-logo {
+  @include center-block(150px);
+}
+
+.lender-info {
+  margin-top: 40px;
+  @include tablet-portrait-and-up {
+    margin-top: 0;
+  }
 }
