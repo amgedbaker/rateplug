@@ -111,8 +111,10 @@
 }
 
 .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
-  max-height: 100%;
   border: none;
+  @include tablet-portrait-and-up {
+    max-height: 100%;
+  }
 }
 
 
@@ -127,9 +129,11 @@
 
 .item-wrap {
   width: 100%;
+  padding-bottom: 3rem;
   @include tablet-portrait-and-up {
     display: flex;
     flex-direction: column;
+    padding-bottom: 0;
   }
 }
 
