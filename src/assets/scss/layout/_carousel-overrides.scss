@@ -3,34 +3,36 @@
   margin: 3rem 0;
   .carousel-inner {
     > .item{
-      @include tablet-portrait-and-up {
+        @media(min-width: 992px) {
         transition: 500ms ease-in-out left;
       }
     }
     .active{
       &.left{
-        @include tablet-portrait-and-up {
+
+          @media(min-width: 992px) {
           left:-33%;
         }
       }
       &.right{
-        @include tablet-portrait-and-up {
+
+          @media(min-width: 992px) {
           left:33%;
         }
       }
     }
     .next{
-      @include tablet-portrait-and-up {
+        @media(min-width: 992px) {
         left: 33%;
       }
     }
     .prev{
-      @include tablet-portrait-and-up {
+        @media(min-width: 992px) {
         left: -33%;
       }
     }
     > .item{
-      @include tablet-portrait-and-up {
+        @media(min-width: 992px) {
         transition: 500ms ease-in-out left;
         transition: 500ms ease-in-out all;
         backface-visibility: visible;

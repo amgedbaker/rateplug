@@ -116,7 +116,9 @@ ul {
 }
 
 .pad-left {
-  padding-left: 1.5rem;
+  @include tablet-landscape-and-up {
+    padding-left: 1.5rem;
+  }
 }
 
 .circle-num {
@@ -199,13 +201,16 @@ ul {
 }
 
 .popover.top > .arrow {
-  left: 218px !important;
-  @media (min-device-width: 325px) and (max-device-width: 400px) {
-    left: 80% !important;
-  }
-  @media (min-device-width: 401px) and (max-device-width: 650px) {
-    left: 85.5% !important;
-  }
+  left: calc(63.5% + 10px) !important;
+  // @media (min-device-width: 325px) and (max-device-width: 400px) {
+  //   left: 80% !important;
+  // }
+  // @media (min-device-width: 401px) and (max-device-width: 650px) {
+  //   left: 85.5% !important;
+  // }
+  // @include tablet-landscape-and-up {
+  //   left: 191px !important;
+  // }
   &:after {
     border-top-color: $light-gray-hover;
   }

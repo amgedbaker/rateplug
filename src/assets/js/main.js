@@ -55,7 +55,7 @@ var Main = {
     // for every slide in carousel, copy the next slide's item in the slide.
     // Do the same for the next, next item.
 
-    if($(window).width() >= 768) {
+    if(this.$window.width() > 992) {
       $('.carousel .item').each(function(){
         var next = $(this).next();
         if (!next.length) {

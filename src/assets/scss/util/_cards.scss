@@ -63,7 +63,12 @@
   width: 20px;
   height: 20px;
   margin-top: -10px;
-  margin-right: -10px;
+  margin-left: 10px;
+}
+
+.popover-icon-contain {
+  display: inline-block;
+  min-width: 90px;
 }
 
 .popover-content {

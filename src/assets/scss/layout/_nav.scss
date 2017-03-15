@@ -147,7 +147,6 @@
 
 .upper-nav-container-mobile {
   li {
-    // display: block;
     padding: 10px 0;
     @include below-tablet-portrait {
       border-bottom: 1px solid $font-gray;
@@ -250,9 +249,6 @@
 }
 
 .shrink {
-  // min-height: 30px;
-  // height: 30px;
-  // margin-top: -20px;
   @include tablet-portrait-and-up {
     top: -70px;
     transition: all 0.5s ease;
@@ -260,7 +256,7 @@
 
   .icon-logo {
     @include tablet-landscape-and-up {
-      max-width: 195px;
+      width: 195px;
       transition: max-width 0.25s ease;
     }
   }
@@ -280,14 +276,13 @@
 }
 
 .icon-logo {
-  width: 100%;
-  max-width: 175px;
+  width: 175px;
   transition: max-width 0.25s ease;
   @include tablet-portrait-and-up {
-    max-width: 220px;
+    width: 220px;
   }
   @include tablet-landscape-and-up {
-    max-width: 250px;
+    width: 250px;
   }
 }
 
@@ -315,7 +310,7 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@include below-tablet-portrait {
   .side-collapse-container{
     width:100%;
     position:relative;
@@ -340,26 +335,11 @@
   }
 }
 
-
-#signup-modal {
-
-}
-
 .modal-container {
   background-color: white;
   padding: 3rem 0;
   text-align: center;
   label {
     color: $light-black;
-  }
-  @include tablet-portrait-and-up {
-    // .zipcode-form-group label {
-    //   text-align: center;
-    // }
-    // div.col-xs-12 {
-    //   h3, label {
-    //     margin-left: calc(-50px - 1.5rem);
-    //   }
-    // }
   }
 }

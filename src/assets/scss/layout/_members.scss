@@ -5,8 +5,10 @@
   }
   .well {
     min-height: auto;
+    margin-bottom: 1.5rem;
   }
   h4 {
+    margin-top: 0;
     @include font-size(24px);
   }
   .link-list {
@@ -42,8 +44,11 @@
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   .h-p-link {
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+    // margin: 1rem auto;
+    @include tablet-portrait-and-up {
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+    }
     a {
       margin: 1rem 0;
       width: 100%;

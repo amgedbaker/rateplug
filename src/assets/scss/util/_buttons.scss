@@ -7,7 +7,11 @@
   transition: all 0.25s ease;
   margin: 20px auto;
   font-size: 16px;
-
+  @include below-tablet-portrait {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
   &:hover {
     transition: all 0.25s ease;
   }

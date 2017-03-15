@@ -140,14 +140,14 @@
   }
 }
 .zipcode-form-group {
-  @include tablet-portrait-and-up {
+  @include tablet-landscape-and-up {
     padding-left: 1.5rem;
   }
   label {
     width: 100%;
     margin-top: 0;
-    @include tablet-portrait-and-up {
-      text-align: left;
+    text-align: left;
+    @include tablet-landscape-and-up {
       margin-left: 1rem;
     }
   }
@@ -185,6 +185,10 @@
 .h-p-link {
   @include below-tablet-portrait {
     margin: 0 2.5rem 1.5rem;
+  }
+  @include tablet-portrait-and-up {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
   border-top: 4px solid $blueGray;
   vertical-align: top;

@@ -3,6 +3,7 @@
 }
 
 .team-member {
+  // background-color: $blue-hover;
   color: white;
   padding: 2.25rem 15px; 
   img {
@@ -14,5 +15,15 @@
   h4 {
     font-size: 18px;
     margin: 15px 0 20px;
+  }
+  &:nth-child(3) {
+    @include below-tablet-portrait {
+      background-color: $blue-hover;
+    }
+  }
+  &:last-child() {
+    @include below-tablet-portrait {
+      background-color: $blue;
+    }
   }
 }
