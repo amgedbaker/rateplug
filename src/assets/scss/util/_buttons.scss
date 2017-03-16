@@ -38,7 +38,7 @@
 }
 
 .btn-hollow-green-on-black {
-  &:hover {
+  &:hover, &:focus {
     color: $green-hover;
   }
 }

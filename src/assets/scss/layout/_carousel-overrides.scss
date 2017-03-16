@@ -40,9 +40,16 @@
       }
     }
   }
-  .carousel-control{
+  .carousel-control {
+    width: 7%;
     &.left, &.right{
       background-image: none;
+      &:hover {
+        background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.0001) 0%, rgba(0,0,0,0.1) 100%);
+        background-image: linear-gradient(to right, rgba(0,0,0,0.0001) 0%, rgba(0,0,0,0.1) 100%);
+        background-repeat: repeat-x;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+      }
     }
   }
 }
@@ -56,12 +63,24 @@
 .carousel-control {
   &.left {
     @include tablet-portrait-and-up {
-      left: -11%;
+      left: -5%;
+    }
+    @media(min-width: 1200px) {
+      left: 0;
+    }
+    @media(min-width: 1200px) {
+      left: -5%;
     }
   }
   &.right {
     @include tablet-portrait-and-up {
-      right: -11%;
+      right: -5%;
+    }
+    @media(min-width: 1200px) {
+      right: 0;
+    }
+    @media(min-width: 1300px) {
+      right: -5%;
     }
   }
 }

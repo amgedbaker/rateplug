@@ -55,10 +55,12 @@ blockquote {
   position: relative;
   font-style: italic;
   line-height: 1.4;
+  margin-bottom: 0;
+  vertical-align: middle;
 }
 
 .blockquote-cite {
-  margin: 20px auto;
+  margin: 20px auto 0;
   display: block;
   font-style: normal;
   @include font-regular(16px, $light-black, 400, 1);
@@ -66,22 +68,28 @@ blockquote {
 
 .bquote-wrap {
   padding: 0 5%;
-  margin-bottom: 2rem;
+  @include tablet-portrait-and-up {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    width: 49.5%;
+  }
 }
 
 .bquote-row {
   position: relative;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
 }
 
 .dual-quote-divider {
   @include tablet-portrait-and-up {
     position: absolute;
     left: 50%;
-    top: 0;
+    top: 2rem;
     width: 1px;
-    height: calc(100% - 40px);
+    height: calc(100% - 4rem);
     background-color: $light-gray;
   }
 
