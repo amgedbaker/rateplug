@@ -11,7 +11,6 @@ var Main = {
     this.carouselSlider();
     this.dropdown();
     this.popover();
-    // this.modal();
   },
 
   navShrink: function() {
@@ -78,11 +77,6 @@ var Main = {
 
   popover: function() {
     $('[data-toggle="popover"]').popover();
-  },
-
-  modal: function() {
-    // $('#sample-modal').modal();
-    $('#signup-modal').modal();
   }
 
 };

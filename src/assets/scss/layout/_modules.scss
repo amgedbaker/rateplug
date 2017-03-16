@@ -43,6 +43,9 @@
 .light-blue-bg {
   background-color: $light-blue;
   padding: 3rem 0;
+  background: url('../images/coffee.png') top center / cover no-repeat;
+  position: relative;
+  height: 100%;
 
   .btn {
     @include tablet-portrait-and-up {
@@ -52,6 +55,7 @@
   }
 
   .row {
+    z-index: 9;
     @incluce tablet-portrait-and-up {
       display: flex;
       flex-direction: row;
@@ -59,6 +63,16 @@
       justify-content: center;
     }
   }
+}
+
+.bg-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $light-blue;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
 }
 
 .icon-square-wrap {
