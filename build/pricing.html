@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RatePlug</title>
+    <base href="/">
+    
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<!--     <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon"> -->
+    
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="">
+    <!--<link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">-->
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="#">
+
+    <!-- <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png"> -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:300,300i,400" rel="stylesheet">
+
+    <!-- Modernizr -->
+<!--     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div role="header" class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+    <div class="row max-width-container">
+      <div class="navbar-header">
+        <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <div class="logo-wrap logo-mobile visible-xs">
+          <a href="#">
+            <h1 class="sr-only">RatePlug Logo</h1>
+            <img src="images/icon-logo-light.svg" alt="RatePlug Logo" class="icon-logo">
+          </a>
+        </div>
+      </div>
+      <div class="navbar-inverse side-collapse in">
+        <nav role="navigation" class="navbar-collapse nav-wrap">
+          <div class="navbar-header">
+            <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle nav-close pull-left">
+              <img src="images/icon-close-white.svg" class="menu-close-icon">
+            </button>
+            <div class="logo-wrap logo-mobile visible-xs">
+              <a href="#">
+                <h1>RatePlug Logo</h1>
+                <img src="images/icon-logo-light.svg" alt="RatePlug Logo" class="icon-logo">
+              </a>
+            </div>
+          </div>
+
+          <div class="logo-wrap hidden-xs">
+            <a href="#">
+              <h1 class="sr-only">RatePlug Logo</h1>
+              <img src="images/icon-logo-light.svg" alt="RatePlug Logo" class="icon-logo">
+            </a>
+          </div>
+          <div class="item-wrap">
+            <div class="hidden-xs upper-nav-container-desktop">
+              <ul class="upper-nav">
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#" class="login">Login</a></li>
+              </ul>
+            </div>
+            <ul class="nav navbar-nav">
+              <li><a href="#" class="nav-link">Loan Officers</a></li>
+              <li><a href="#" class="nav-link">Agents</a></li>
+              <li><a href="#" class="nav-link">Locations</a></li>
+              <li><a href="#" class="nav-link">Pricing</a></li>
+              <li><a href="#" class="nav-link">Blog</a></li>
+              <li class="sign-up sign-up-nav hidden-xs"><button class="btn btn-primary btn-lg btn-solid-green" data-toggle="modal" data-target="#signup-modal">Sign Up</button></li>
+              <li class="visible-xs no-hover">
+                <ul class="upper-nav upper-nav-container-mobile">
+                  <li><a href="#">Company</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li class="login-wrap hidden-xs"><a href="#" class="login">Login</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="mobile-login visible-xs">
+              <a href="#" class="login">Login</a>
+            </div>
+            <div class="sign-up-mobile">
+              <button class="btn btn-primary btn-lg btn-block btn-solid-green visible-xs" data-toggle="modal" data-target="#signup-modal">Sign Up</button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- The Sign Up Modal -->
+<div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="signup-modalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close close-modal-icon" data-dismiss="modal" aria-label="Close">
+        <img src="images/icon-close.svg" aria-hidden="true" />
+      </button>
+      <div class="col-xs-12 modal-container">
+        <div class="col-xs-12">
+          <div class="modal-inner">
+            <h3><span class="circle-num">1</span>Are you a loan officer or agent?</h3>
+            <div class="btn-wrapper">
+              <button class="btn btn-primary btn-lg btn-block btn-hollow-green btn-hollow-green-on-black">I'm an agent</button>
+              <button class="btn btn-primary btn-lg btn-block btn-hollow-green btn-hollow-green-on-black">I'm a Loan Officer</button>
+            </div>
+            <form class="form-inline zipcode-form-group">
+              <div class="form-group">
+                <label for="zipcode" class="h3"><span class="circle-num">2</span>What is your zipcode?</label>
+                <div class="zip-wrap">
+                  <input type="text" class="form-control" id="" placeholder="Enter Zip">
+                  <button type="submit" class="btn btn-primary btn-lg btn-blue-hollow">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+    <div class="container-fluid">
+  <div class="row">
+    <div class="jumbotron bg-gradient pad-top jumbotron-home">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>We empower buyers and create new opportunities for you.<span class="blocks"></span></h1>
+            <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+            <p>
+              <a class="btn btn-lg btn-solid-green" href="#" role="button">Get Started</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- /container -->
+
+    <div class="container">
+  <div class="col-xs-12 col-sm-5 margin-bottom">
+    <h3 class="blue-headline text-uppercase">This is a headline</h3>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+  </div>
+  <div class="col-xs-12 col-sm-5 col-sm-offset-2 spacer margin-bottom">
+    <img src="images/1171842.jpg" />
+  </div>
+</div>
+
+    <div class="container-fluid pricing-card-section">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 margin-top-bottom text-center">
+        <img src="images/icon-house-hand.svg" class="img-responsive center-block icon-max-width"/>
+        <h2>Loan Officers</h2>
+        <h4>Includes all of these great features:</h4>
+        <p>Vertical and horizontal centering within a flexcontainer is trivial. Just set justify-content and/or align-items to center. Again, it depends on the orientation of the main axis, so whether flex-direction is set to row or column.</p>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 pricing-card">
+        <div class="well">
+          <h4 class="text-uppercase text-center gray-top">Option 1</h4>
+          <div class="card-inner-wrap">
+            <p class="blue-text">Features</p>
+            <ul class="feature-list">
+              <li>Kickstarter tousled paleo marfa bushwick sriracha. Fanny pack humblebrag authentic direct trade</li>
+              <li>Kickstarter tousled paleo marfa bushwick sriracha. Fanny pack humblebrag authentic direct trade</li>
+              <li>Kickstarter tousled paleo marfa bushwick sriracha. Fanny pack humblebrag authentic direct trade</li>
+            </ul>
+            <div class="pricing-card-bottom">
+              <div class="price-left">
+                <p class="blue-text">Price:</p>
+                <p class="blue-text">Details:</p>
+              </div>
+              <div class="details-right">
+                <p class="price">$<span class="number">270</span> for 6 months</p>
+                <p>Plus a one-time setup fee of $34.00</p>
+                <p>Auto renewal to protect your Realtor relationships!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 pricing-card">
+        <div class="well">
+          <h4 class="text-uppercase text-center green-top">Option 2</h4>
+          <div class="card-inner-wrap">
+            <p class="blue-text">Features</p>
+            <ul class="feature-list">
+              <li>Kickstarter tousled paleo marfa bushwick sriracha. Fanny pack humblebrag authentic direct trade</li>
+              <li>Kickstarter tousled paleo marfa bushwick sriracha. Fanny pack humblebrag authentic direct trade</li>
+              <li>Kickstarter tousled paleo marfa bushwick sriracha. Fanny pack humblebrag authentic direct trade</li>
+              <li>Kickstarter tousled paleo marfa bushwick sriracha. Fanny pack humblebrag authentic direct trade Fanny pack humblebrag authentic direct trade Fanny pack humblebrag authentic direct trade</li>
+            </ul>
+            <div class="pricing-card-bottom">
+              <div class="price-left">
+                <p class="blue-text">Price:</p>
+                <p class="blue-text">Details:</p>
+              </div>
+              <div class="details-right">
+                <p class="price">$<span class="number">270</span> for 6 months</p>
+                <p>Plus a one-time setup fee of $34.00</p>
+                <p>Auto renewal to protect your Realtor relationships!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 pricing-card">
+        <div class="well">
+          <h4 class="text-uppercase text-center gray-top">Option 1</h4>
+          <div class="card-inner-wrap">
+            <p class="blue-text">Features</p>
+            <ul class="feature-list">
+              <li>Kickstarter tousled paleo marfa bushwick sriracha. Fanny pack humblebrag authentic direct trade</li>
+              <li>Kickstarter tousled paleo marfa bushwick sriracha. Fanny pack humblebrag authentic direct trade</li>
+              <li>Kickstarter tousled paleo marfa bushwick sriracha. Fanny pack humblebrag authentic direct trade</li>
+            </ul>
+            <div class="pricing-card-bottom">
+              <div class="price-left">
+                <p class="blue-text">Price:</p>
+                <p class="blue-text">Details:</p>
+              </div>
+              <div class="details-right">
+                <p class="price">$<span class="number">270</span> for 6 months</p>
+                <p>Plus a one-time setup fee of $34.00</p>
+                <p>Auto renewal to protect your Realtor relationships!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-wrap">
+        <button class="btn btn-primary btn-lg btn-wide btn-solid-green">Sign Up</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <div class="container-fluid light-blue-bg pricing-blue">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 margin-top-bottom text-center">
+        <img src="images/icon-house-hand.svg" class="img-responsive center-block icon-max-width"/>
+        <h2>Agents</h2>
+        <h4>Includes all of these great features:</h4>
+        <p>Vertical and horizontal centering within a flexcontainer is trivial. Just set justify-content and/or align-items to center. Again, it depends on the orientation of the main axis, so whether flex-direction is set to row or column.</p>
+      </div>
+      <div class="button-wrap">
+        <button class="btn btn-primary btn-lg btn-wide btn-solid-green">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container-fluid margin-top-bottom3 three-up">
+  <div class="container">
+    <div class="row row-center">
+      <div class="col-sm-5 col-md-3 text-center col-center h-p-link">
+        <h3 class="blue-header text-uppercase">Heading Donec id elit non stuff</h3>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <a class="text-link-arrow text-link-arrow-green text-uppercase" href="#">View details</a>
+      </div>
+      <div class="col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-1 col-center text-center h-p-link">
+        <h3 class="blue-header text-uppercase">Heading</h3>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <a class="text-link-arrow text-link-arrow-green text-uppercase" href="#">View details</a>
+     </div>
+      <div class="col-sm-5 col-md-3 col-md-offset-1 col-center text-center h-p-link">
+        <h3 class="blue-header text-uppercase">Heading</h3>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <a class="text-link-arrow text-link-arrow-green text-uppercase" href="#">View details</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer class="container-fluid">
+  <div class="row">
+    <div class="container">
+    
+       <!-- first column -->
+      <div class="col-xs-12 col-sm-6 col-md-3 footer-column no-pad-left text-uppercase left-links">
+        <ul>
+          <li><a href="#">Loan Officers</a></li>
+          <li><a href="#">Agents</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Blog</a></li>
+          <li class="social-icons">
+            <a href="#"><img src="/images/icon-facebook.svg" alt="facebook icon" class="facebook-icon"/><span class="sr-only">facebook</span></a>
+            <a href="#"><img src="/images/icon-twitter.svg" alt="twitter icon" class="twitter-icon"/><span class="sr-only">twitter</span></a>
+            <a href="#"><img src="/images/icon-linkedin.svg" alt="linkedin icon" class="linkedin-icon"/><span class="sr-only">linkedin</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- second column -->
+      <div class="col-xs-12 col-sm-6 col-md-3 footer-column no-pad-left text-uppercase">
+        <h6>Locations:</h6>
+        <div class="locations">
+          <ul class="location-col col-xs-2 no-pad-left">
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+          </ul>
+
+          <ul class="location-col col-xs-2 no-pad-left">
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+          </ul>
+
+          <ul class="location-col col-xs-2 no-pad-left">
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+          </ul>
+
+          <ul class="location-col col-xs-2 no-pad-left">
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+          </ul>
+
+          <ul class="location-col col-xs-2 no-pad-left">
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+          </ul>
+          
+        </div>
+      </div>
+
+      <!-- third column -->
+      <div class="col-xs-12 col-sm-6 col-md-4 footer-column no-pad-left footer-contact">
+        <div class="footer-contact-wrapper">
+          <h6 class="text-uppercase">Address:</h6>
+          <p>RatePlug, LLC</p>
+          <p>1700 N Park St, Suite 107 </p>
+          <p>Naperville, Illinois 60563</p>
+        </div>
+        <div class="footer-contact-wrapper">
+          <h6 class="text-uppercase">Call Us:</h6>
+          <p>Phone: (877) 710-0808</p>
+          <p>Fax: (630) 848-1337</p>
+          <p>Phone: (877) 710-0808</p>
+        </div>
+        <div class="footer-contact-wrapper">
+          <img src="images/icon-equal-housing.svg" class="org-icon equal-icon" />
+          <img src="images/icon-mba.png" class="org-icon mba-icon" />
+          <img src="images/icon-ccsafe.svg" class="org-icon ccsafe-icon" />
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+    </body>
+
+
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/main.min.js"></script>
+
+
+
+  </body>
+</html>
