@@ -62,7 +62,7 @@
 
 .carousel-control {
   &.left {
-    @include tablet-portrait-and-up {
+    @include tablet-landscape-and-up {
       left: -5%;
     }
     @media(min-width: 1200px) {
@@ -73,7 +73,7 @@
     }
   }
   &.right {
-    @include tablet-portrait-and-up {
+    @include tablet-landscape-and-up {
       right: -5%;
     }
     @media(min-width: 1200px) {

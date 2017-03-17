@@ -270,6 +270,11 @@
   @include tablet-portrait-and-up {
     align-self: flex-end;
   }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    position: absolute;
+    left: 10px;
+    bottom: 3px;
+  }
   h1 {
     text-indent: -9999px;
     position: absolute;

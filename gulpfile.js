@@ -85,7 +85,7 @@ gulp.task('sass', function() {
   return gulp.src(paths.source + 'scss/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefixer({
-      browsers: ['defaults', 'last 2 versions', 'Firefox > 45', '> 1% in US'],
+      browsers: ['defaults', 'last 2 versions', 'Firefox > 45', '> 0.5% in US'],
       cascade: false
     }))
     .pipe(gulp.dest(paths.dest + '/css'))
