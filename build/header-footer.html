@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RatePlug</title>
+    <base href="/">
+    
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<!--     <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon"> -->
+    
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="">
+    <!--<link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">-->
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="#">
+
+    <!-- <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png"> -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:300,300i,400" rel="stylesheet">
+
+    <!-- Modernizr -->
+<!--     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div role="header" class="navbar navbar-fixed-top navbar-inverse existing-nav">
+  <div class="container-fluid">
+    <div class="row max-width-container">
+      <div class="navbar-header">
+        <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <div class="logo-wrap logo-mobile visible-xs">
+          <a href="#">
+            <h1 class="sr-only">RatePlug Logo</h1>
+            <img src="images/icon-logo-light.svg" alt="RatePlug Logo" class="icon-logo">
+          </a>
+        </div>
+      </div>
+      <div class="navbar-inverse side-collapse in">
+        <nav role="navigation" class="navbar-collapse nav-wrap">
+          <div class="navbar-header">
+            <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left">
+              <img src="images/icon-close-white.svg" class="menu-close-icon">
+            </button>
+            <div class="logo-wrap logo-mobile visible-xs">
+              <a href="#">
+                <h1>RatePlug Logo</h1>
+                <img src="images/icon-logo-light.svg" alt="RatePlug Logo" class="icon-logo">
+              </a>
+            </div>
+          </div>
+
+          <div class="logo-wrap hidden-xs">
+            <a href="#">
+              <h1 class="sr-only">RatePlug Logo</h1>
+              <img src="images/icon-logo-light.svg" alt="RatePlug Logo" class="icon-logo">
+            </a>
+          </div>
+          <div class="item-wrap">
+            <div class="hidden-xs upper-nav-container-desktop">
+              <ul class="upper-nav">
+                <li><a href="#" class="login">Contact Us</a></li>
+              </ul>
+            </div>
+            <ul class="nav navbar-nav">
+
+              <!-- The ID and HREF must match -->
+              <li class="dropdown" id="menu1">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
+                  Admin Home
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-menu-item"><a href="#">Action</a></li>
+                  <li class="dropdown-menu-item"><a href="#">Another action</a></li>
+                  <li class="dropdown-menu-item"><a href="#">Something else here</a></li>
+                  <li class="dropdown-menu-item"><a href="#">Separated link</a></li>
+                  <li class="dropdown-menu-item"><a href="#">Action</a></li>
+<!--                   <li class="dropdown-menu-item"><a href="#">Another action</a></li>
+                  <li class="dropdown-menu-item"><a href="#">Something else here</a></li>
+                  <li class="dropdown-menu-item"><a href="#">Separated link</a></li> -->
+                </ul>
+              </li>
+
+              <!-- The ID and HREF must match -->
+              <li class="dropdown" id="menu2">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#menu2">
+                  Lenders
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-menu-item"><a href="#">Action</a></li>
+                  <li class="dropdown-menu-item"><a href="#">Another action</a></li>
+                  <li class="dropdown-menu-item"><a href="#">Something else here</a></li>
+                  <li class="dropdown-menu-item"><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#" class="nav-link">Realtors</a></li>
+              <li><a href="#" class="nav-link">Customers</a></li>
+              <li><a href="#" class="nav-link">Support</a></li>
+              <li class="visible-xs no-hover">
+                <ul class="upper-nav upper-nav-container-mobile">
+                  <li class="login-wrap hidden-xs"><a href="#" class="login">Contact Us</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="mobile-login visible-xs">
+              <a href="#" class="login">Contact Us</a>
+            </div>
+<!--             <div class="sign-up-mobile">
+              <button class="btn btn-primary btn-lg btn-block btn-solid-green visible-xs">Sign Up</button>
+            </div> -->
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- this div is for spacing purposes, only to be used in development. -->
+    <div style="height: 500px";></div>
+
+    <footer class="container-fluid">
+  <div class="row">
+    <div class="container">
+    
+       <!-- first column -->
+      <div class="col-xs-12 col-sm-6 col-md-3 footer-column no-pad-left text-uppercase left-links">
+        <ul>
+          <li><a href="#">Loan Officers</a></li>
+          <li><a href="#">Agents</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Blog</a></li>
+          <li class="social-icons">
+            <a href="#"><img src="/images/icon-facebook.svg" alt="facebook icon" class="facebook-icon"/><span class="sr-only">facebook</span></a>
+            <a href="#"><img src="/images/icon-twitter.svg" alt="twitter icon" class="twitter-icon"/><span class="sr-only">twitter</span></a>
+            <a href="#"><img src="/images/icon-linkedin.svg" alt="linkedin icon" class="linkedin-icon"/><span class="sr-only">linkedin</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- second column -->
+      <div class="col-xs-12 col-sm-6 col-md-3 footer-column no-pad-left text-uppercase">
+        <h6>Locations:</h6>
+        <div class="locations">
+          <ul class="location-col col-xs-2 no-pad-left">
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+          </ul>
+
+          <ul class="location-col col-xs-2 no-pad-left">
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+          </ul>
+
+          <ul class="location-col col-xs-2 no-pad-left">
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+          </ul>
+
+          <ul class="location-col col-xs-2 no-pad-left">
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+          </ul>
+
+          <ul class="location-col col-xs-2 no-pad-left">
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+            <li><a href="#">AA</a></li>
+          </ul>
+          
+        </div>
+      </div>
+
+      <!-- third column -->
+      <div class="col-xs-12 col-sm-6 col-md-4 footer-column no-pad-left footer-contact">
+        <div class="footer-contact-wrapper">
+          <h6 class="text-uppercase">Address:</h6>
+          <p>RatePlug, LLC</p>
+          <p>1700 N Park St, Suite 107 </p>
+          <p>Naperville, Illinois 60563</p>
+        </div>
+        <div class="footer-contact-wrapper">
+          <h6 class="text-uppercase">Call Us:</h6>
+          <p>Phone: (877) 710-0808</p>
+          <p>Fax: (630) 848-1337</p>
+          <p>Phone: (877) 710-0808</p>
+        </div>
+        <div class="footer-contact-wrapper">
+          <img src="images/icon-equal-housing.svg" class="org-icon equal-icon" />
+          <img src="images/icon-mba.png" class="org-icon mba-icon" />
+          <img src="images/icon-ccsafe.svg" class="org-icon ccsafe-icon" />
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+    </body>
+
+
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/main.min.js"></script>
+
+
+
+  </body>
+</html>

@@ -58,6 +58,28 @@
       height: 60px;
     }
 
+    > li.open {
+      padding-top: 0;
+      padding-bottom: 0;
+      &:hover {
+        background-color: transparent;
+      }
+      > a {
+        @include below-tablet-portrait {
+          background-color: $light-gray-hover;
+          color: $light-black;
+          padding-top: 20px;
+          padding-bottom: 15px;
+        }
+        &:hover, &:focus {
+          @include below-tablet-portrait {
+            background-color: $light-gray-hover;
+            color: $light-black;
+          }
+        }
+      }
+    }
+
     > li {
       text-transform: uppercase;
       @include below-tablet-portrait {
@@ -196,7 +218,7 @@
       bottom: -3px;
       height: 3px;
       width: 0;
-      background: #fff;
+      background: $green;
       transition: all 0.25s ease;
     }
     &:hover:after {
@@ -317,7 +339,7 @@
   overflow: hidden;
 }
 
-
+// Styles for the mobile slide-out menu
 @include below-tablet-portrait {
   .side-collapse-container{
     width:100%;
@@ -349,5 +371,45 @@
   text-align: center;
   label {
     color: $light-black;
+  }
+}
+
+// nav dropdowns
+.dropdown-menu {
+  padding-top: 0;
+  padding-bottom: 0;
+  > li {
+    > a {
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+      text-transform: none;
+      font-size: 16px;
+    }
+  }
+  @include tablet-portrait-and-up {
+    top: 30px;
+    border: none;
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.15);
+    border-radius: 0;
+    min-width: 295px;
+  }
+  @include tablet-landscape-and-up {
+    top: 32px;
+  }
+}
+
+.dropdown-menu-item {
+  @include tablet-portrait-and-up {
+    border-bottom: 2px solid $light-gray-hover;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus {
+  @include below-tablet-portrait {
+    color: $font-gray;
+    background-color: $white-gray;
   }
 }
