@@ -37,7 +37,7 @@
 @import "bootstrap/navs";
 @import "bootstrap/navbar";
 // @import "bootstrap/breadcrumbs";
-@import "bootstrap/pagination";
+// @import "bootstrap/pagination";
 // @import "bootstrap/pager";
 // @import "bootstrap/labels";
 // @import "bootstrap/badges";
@@ -64,10 +64,10 @@
 
 
 // custom styles
-@import 'base/normalize';
+// @import 'base/normalize';
 @import 'util/variables';
 @import 'util/mixins';
-@import 'util/helpers';
+// @import 'util/helpers';
 @import 'base/typography';
 @import 'layout/nav';
 @import 'layout/global';

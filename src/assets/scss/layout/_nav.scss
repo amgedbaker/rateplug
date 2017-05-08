@@ -14,6 +14,14 @@
   }
 }
 
+.existing-nav, .existing-footer {
+  width: 879px;
+  margin: 0 auto;
+  @media(max-width: 878px) {
+    width: 100%;
+  }
+}
+
 .navbar-header{
   background-color: $light-black;
   @include below-tablet-portrait {
